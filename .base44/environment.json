@@ -1,0 +1,19 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/api/health",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "JWT_SECRET",
+      "description": "Secret used to sign session JWTs. Auto-generated for development; replace with your own for production.",
+      "requiredAtBoot": true,
+      "generatedForDevelopment": true
+    },
+    {
+      "name": "OPENAI_API_KEY",
+      "description": "OpenAI API key for AI-powered security analysis. Optional — the app works with rule-based scanning without it, but AI findings require a valid key from https://platform.openai.com/api-keys.",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": true
+    }
+  ]
+}
